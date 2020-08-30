@@ -1,0 +1,22 @@
+  <h1>Home: tarea</h1>
+  <p>edad 1:</p>
+<input type="text" [(ngModel)]="edad1">
+<p>edad 2:</p>
+
+<input type="text" [(ngModel)]="edad2">
+<button (click)="CalcularPromedio()">Calcular Suma y promedio: </button>
+<div>
+<label for="suma"> suma:  {{suma}}</label>
+</div>
+<div>
+<label for="promedio">promedio:  {{promedio}}</label>
+</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul>
+  <li [routerLink]="'/login'">Login (prueba de routing con link)</li>
+</ul>
+  </div>
+
+</nav>
