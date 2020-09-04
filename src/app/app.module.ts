@@ -19,20 +19,20 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: BienvenidoComponent
-      },
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: '**',
-        component: ErrorComponent
-      },
-    ])
+    // RouterModule.forRoot([
+    //   {
+    //     path: '',
+    //     component: BienvenidoComponent
+    //   },
+    //   {
+    //     path: 'login',
+    //     component: LoginComponent
+    //   },
+    //   {
+    //     path: '**',
+    //     component: ErrorComponent
+    //   },
+    // ])
   ],
   providers: [],
   bootstrap: [AppComponent]

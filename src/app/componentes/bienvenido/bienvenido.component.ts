@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PaisesService } from '../../services/paises.service';
 
 @Component({
   selector: 'app-bienvenido',
@@ -13,14 +14,20 @@ export class BienvenidoComponent implements OnInit {
   edad2;
   promedio = 0;
   suma = 0;
-  constructor() { }
+  usuario = "";
+  constructor(private paisesServ: PaisesService) { }
 
   ngOnInit(): void {
+    this.usuario = localStorage.getItem("Usuario");
+    console.log(this.paisesServ.usuarioPais);
   }
+
 
   CalcularPromedio()
   {
     this.suma = (parseFloat(this.edad1.toString()) + parseFloat(this.edad2.toString()));
     this.promedio = this.suma /2;
   }
+
+
 }
