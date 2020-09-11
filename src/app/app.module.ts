@@ -7,34 +7,27 @@ import { FormsModule } from '@angular/forms';
 import { BienvenidoComponent } from './componentes/bienvenido/bienvenido.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { ErrorComponent } from './componentes/error/error.component';
+import { ControlEntidadComponent } from './componentes/control-entidad/control-entidad.component';
 import { RouterModule } from '@angular/router';
+import { ListadoEntidadComponent } from './componentes/listado-entidad/listado-entidad.component';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
     BienvenidoComponent,
     LoginComponent,
-    ErrorComponent
+    ErrorComponent,
+    ControlEntidadComponent,
+    ListadoEntidadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    // RouterModule.forRoot([
-    //   {
-    //     path: '',
-    //     component: BienvenidoComponent
-    //   },
-    //   {
-    //     path: 'login',
-    //     component: LoginComponent
-    //   },
-    //   {
-    //     path: '**',
-    //     component: ErrorComponent
-    //   },
-    // ])
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

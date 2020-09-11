@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PaisesService } from 'src/app/services/paises.service';
 
 @Component({
   selector: 'app-clase1',
@@ -7,17 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Clase1Component implements OnInit {
 
-  public ejemplo = 'Hola Mundo';
-  public ejemplo2 = 'Hola Mundo';
-  constructor() { }
+  title = 'practicaLab4';
+  edad1;
+  edad2;
+  promedio = 0;
+  suma = 0;
+  usuario = "";
+  miVariableaPasaraotrocomp;
+  constructor(private paisesServ: PaisesService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.usuario = localStorage.getItem("Usuario");
+    console.log(this.paisesServ.usuarioPais);
   }
 
-  PruebaClick() {
-    this.ejemplo2 = 'Ejecutamos el evento!!!';
+
+  CalcularPromedio()
+  {
+    this.suma = (parseFloat(this.edad1.toString()) + parseFloat(this.edad2.toString()));
+    this.promedio = this.suma /2;
   }
-
-
 
 }

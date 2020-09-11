@@ -23,14 +23,14 @@ export class LoginComponent implements OnInit {
 
   login()
   {
-    this.usuariodto = new Usuario;
+    // this.usuariodto = new Usuario;
 
-      if( this.username == "carla.vargas@gmail.com" && this.password ==  "asd123")
-      {
-        this.usuariodto.nombre = this.username;
-        this.usuariodto.clave = this.password;
-        localStorage.setItem('Usuario', this.usuariodto.nombre);
-        this.router.navigate(['']);
-      }
+    //   if( this.username == "carla.vargas@gmail.com" && this.password ==  "asd123")
+    //   {
+    //     this.usuariodto.Nombre = this.username;
+    //     this.usuariodto.clave = this.password;
+    //     localStorage.setItem('Usuario', this.usuariodto.nombre);
+    //     this.router.navigate(['']);
+    //   }
   }
 }

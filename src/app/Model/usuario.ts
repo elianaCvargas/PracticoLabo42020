@@ -1,4 +1,9 @@
 export class Usuario {
-  nombre:string;
-  clave:string;
+  id: number;
+  Sexo: string;
+  email: string;
+  Nombre: string;
+  Apellido: string;
+  FechaNac: Date;
+  FotoPerfil:string;
 }
